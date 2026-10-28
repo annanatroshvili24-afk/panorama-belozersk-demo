@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <title>Панорама – логотип на светлом фоне</title>
+  <rect width="480" height="300" fill="#ece6da"/>
+  <g transform="translate(192 30) scale(1.5)"><circle cx="32" cy="15" r="8.5" fill="#d98a24"/><path d="M5 27.5H59" stroke="#0f1922" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="#0f1922"/><path d="M42 38L51 32.5V43.5Z" fill="#0f1922"/><circle cx="24.5" cy="37" r="1.4" fill="#ece6da"/></g>
+  <text x="240" y="160" text-anchor="middle" font-family="'Tenor Sans', Georgia, serif" font-size="40" letter-spacing="6" fill="#0f1922">ПАНОРАМА</text>
+  <text x="240" y="196" text-anchor="middle" font-family="'Golos Text', 'Segoe UI', sans-serif" font-size="17" letter-spacing="1" fill="#5d6f7a">ресторан у Белого озера</text>
+</svg>

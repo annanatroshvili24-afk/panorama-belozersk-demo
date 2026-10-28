@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex, nofollow" data-publish>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Панорама – ресторан на берегу Белого озера в Белозерске</title>
+<meta name="description" content="Белозерский судак, уха и снеток с видом на Белое озеро. Панорамные окна, летняя веранда, банкетный зал. Белозерск, наб. П.К. Георгиевского, 5А. +7 953 109-19-99.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="Ресторан «Панорама»">
+<meta property="og:title" content="Ресторан на берегу Белого озера в Белозерске">
+<meta property="og:description" content="Судак, уха и снеток. Панорамные окна, веранда у воды и закат прямо за стеклом.">
+<meta property="og:image" content="./assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0f1922">
+<link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
+<link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&family=Golos+Text:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%277%27 fill=%27%230f1922%27/%3E%3Ccircle cx=%2716%27 cy=%279.5%27 r=%274.5%27 fill=%27%23f0a944%27/%3E%3Cpath d=%27M4 16H28%27 stroke=%27%23ece6da%27 stroke-width=%271.6%27 stroke-linecap=%27round%27/%3E%3Cpath d=%27M7.5 23C11 19.3 18 19.3 21.5 23C18 26.7 11 26.7 7.5 23z%27 fill=%27%23ece6da%27/%3E%3Cpath d=%27M21 23L27 19.3V26.7z%27 fill=%27%23ece6da%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="vibe.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"Панорама","servesCuisine":["Русская","Европейская"],"telephone":"+79531091999","priceRange":"1000–1500 ₽","address":{"@type":"PostalAddress","streetAddress":"наб. П.К. Георгиевского, 5А","addressLocality":"Белозерск","addressRegion":"Вологодская область","addressCountry":"RU"},"geo":{"@type":"GeoCoordinates","latitude":60.037209,"longitude":37.814173},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens":"12:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"23:59"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"45"},"sameAs":["https://vk.ru/panoramabelozersk"]}
+</script>
+<style>
+  /* ---- тема «Белое озеро на закате»: северная вода, береста, морошка ---- */
+  .v-page {
+    --v-canvas: #0f1922; --v-surface: #172431;
+    --v-ink: #ece6da; --v-ink-soft: #a3b2bb;
+    --v-accent: #f0a944; --v-accent-ink: #1d1206;
+    --water: #24394a;
+    --v-shadow-color: 4 10 16;
+    --v-font-display: "Tenor Sans", "Georgia", serif;
+    --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
+    --v-display-weight: 400;
+    --v-track-tight: -0.012em;
+    --v-radius: 4px;
+    --v-section: clamp(4.5rem, 10vw, 9rem);
+  }
+  html, body { margin: 0; background: #0f1922; }
+  html { scroll-padding-top: 5rem; }
+  .v-page { line-height: 1.62; letter-spacing: .005em; }
+  .v-page .v-display { line-height: 1.04; }
+  .v-page .v-display--xl { font-size: clamp(2.7rem, 1.4rem + 4.6vw, 6.2rem); line-height: .98; }
+  .v-page h3 { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-xl); line-height: 1.1; }
+  .v-page p { text-wrap: pretty; }
+  .soft { color: var(--v-ink-soft); }
+  .slot { background: color-mix(in oklab, var(--v-accent) 22%, transparent); border-radius: 3px; padding: 0 .25em; }
+  .v-page a.link { color: var(--v-ink); text-decoration: underline; text-decoration-color: color-mix(in oklab, var(--v-accent) 70%, transparent); text-underline-offset: .22em; transition: text-decoration-color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .v-page a.link:hover { text-decoration-color: var(--v-accent); } }
+  .q { font-family: var(--v-font-display); }
+  .who { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+
+  /* ---- шапка ---- */
+  .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; gap: var(--v-5); padding: .8rem var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
+  .bar.is-scrolled { background: rgb(15 25 34 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar__brand { display: flex; align-items: center; gap: .6rem; font-family: var(--v-font-display); font-size: 1.55rem; line-height: 1; text-decoration: none; }
+  .bar__mark { width: 2.9rem; height: 2.2rem; flex: none; }
+  @media (max-width: 480px) { .bar__mark { width: 2.2rem; height: 1.65rem; } .bar__brand { gap: .45rem; } .bar__brand span { font-size: .98rem; letter-spacing: .05em; } .bar { gap: var(--v-3); padding-inline: 1rem; } .bar .v-btn { padding: .65em 1em; font-size: .8rem; } }
+  .bar__brand span { letter-spacing: .1em; text-transform: uppercase; font-size: 1.2rem; }
+  .bar__brand small { font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: .01em; }
+  .bar nav { display: flex; gap: var(--v-5); margin-left: auto; font-size: var(--v-t-sm); }
+  .bar nav a { text-decoration: none; color: var(--v-ink-soft); transition: color .16s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .bar nav a:hover { color: var(--v-ink); } }
+  .bar .v-btn { padding: .7em 1.2em; }
+  @media (max-width: 960px) { .bar nav { display: none; } .bar .v-btn { margin-left: auto; } .bar__brand small { display: none; } }
+
+  /* ---- 1 · hero ---- */
+  .hero__back { inset: -6% 0; }
+  .hero__back img, .hero__back picture { width: 100%; height: 100%; }
+  .hero__back img { object-fit: cover; object-position: 60% 50%; }
+  .hero__shade { position: absolute; inset: 0; z-index: 2; pointer-events: none;
+    background: linear-gradient(90deg, rgb(10 17 24 / .82) 0%, rgb(10 17 24 / .55) 34%, transparent 62%), linear-gradient(to top, rgb(10 17 24 / .7), transparent 38%); }
+  .hero__copy { max-width: min(44rem, 88vw); }
+  .hero__copy .v-lede { margin-top: var(--v-5); max-width: 30ch; color: #e4ddd0; }
+  .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-6); }
+  .hero__when { font-size: var(--v-t-sm); color: #d6d0c4; }
+  .hero__when b { font-weight: 500; color: var(--v-ink); }
+  @media (max-width: 860px) {
+    .hero__back img { object-position: 50% 40%; }
+    .hero__shade { background: linear-gradient(to top, rgb(10 17 24 / .92) 0%, rgb(10 17 24 / .62) 40%, transparent 72%); }
+    .hero__copy.v-copy--lead { bottom: clamp(2rem, 7vh, 4rem); }
+  }
+
+  /* ---- 2 · сегодня (фирменный ход) ---- */
+  .today { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .today__ph { position: relative; aspect-ratio: 3 / 4; overflow: hidden; border-radius: var(--v-radius); box-shadow: var(--v-e2); }
+  .today__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .today__ph figcaption { position: absolute; left: 1rem; bottom: .9rem; font-size: var(--v-t-xs); color: #f3e6d6; text-shadow: 0 1px 8px rgb(0 0 0 / .6); }
+  .today__lead { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  .today__time { font-family: var(--v-font-display); font-size: clamp(3.2rem, 2rem + 6vw, 7.5rem); line-height: .95; letter-spacing: -.02em; font-variant-numeric: tabular-nums; margin-top: var(--v-3); }
+  .today__time small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-lg); letter-spacing: 0; color: var(--v-ink); margin-bottom: var(--v-3); }
+  .today__note { margin-top: var(--v-5); max-width: 40ch; font-size: var(--v-t-lg); line-height: 1.45; }
+  .status { display: inline-flex; align-items: center; gap: .55rem; margin-top: var(--v-7); font-size: var(--v-t-sm); }
+  .status i { width: .55rem; height: .55rem; border-radius: 50%; background: #7fbf8f; box-shadow: 0 0 0 4px rgb(127 191 143 / .18); }
+  .status.is-closed i { background: var(--v-ink-soft); box-shadow: 0 0 0 4px rgb(163 178 187 / .16); }
+  .hours { margin-top: var(--v-4); display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); }
+  .hours li { padding: .7rem .2rem 0; color: var(--v-ink-soft); }
+  .hours li b { display: block; font-weight: 500; color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  .hours li.is-today { color: var(--v-ink); box-shadow: inset 0 2px 0 var(--v-accent); }
+  .hours li.is-today b { color: var(--v-ink); }
+  .tip { margin-top: var(--v-6); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); max-width: 44ch; }
+  .tip p { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.35; }
+  .tip p.who { margin-top: var(--v-2); font-family: var(--v-font-text); font-size: var(--v-t-sm); line-height: 1.5; }
+  @media (max-width: 860px) {
+    .today { grid-template-columns: 1fr; }
+    .today__ph { aspect-ratio: 3 / 4; width: min(100%, calc(72svh * .75)); }
+    .hours { grid-template-columns: repeat(4, minmax(0, 1fr)); row-gap: .4rem; }
+  }
+
+  /* ---- 3 · кухня: pin, сменяются блюда ---- */
+  .kitchen { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 5vw, 5rem); align-items: center; padding: 5.5rem var(--v-gutter) 3rem; max-width: 84rem; margin-inline: auto; }
+  .kitchen__copy { display: flex; flex-direction: column; gap: var(--v-6); }
+  .dishes { position: relative; min-height: 17rem; }
+  .dishes .v-copy { left: 0; top: 0; right: 0; max-width: 34rem; }
+  .dishes p { margin-top: var(--v-3); }
+  .dishes blockquote { margin: var(--v-5) 0 0; padding-left: 1rem; border-left: 1px solid var(--v-accent); }
+  .dishes blockquote p { font-family: var(--v-font-display); font-size: var(--v-t-lg); line-height: 1.35; margin: 0; }
+  .dishes blockquote .who { margin-top: var(--v-2); }
+  .kitchen__bar { height: 1px; background: var(--v-hair); position: relative; max-width: 34rem; }
+  .kitchen__bar i { position: absolute; inset: 0; background: var(--v-accent); transform-origin: left; transform: scaleX(var(--v-p, 0)); }
+  .kitchen__fig { position: relative; height: min(76svh, 44rem); aspect-ratio: 3 / 4; justify-self: end; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); }
+  .kitchen__fig .ph { position: absolute; inset: 0; }
+  .kitchen__fig img { width: 100%; height: 100%; object-fit: cover; }
+  @media (max-width: 860px) {
+    .kitchen { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: var(--v-5); padding: 4.6rem var(--v-gutter) 1.5rem; }
+    .kitchen__fig { order: -1; height: 40svh; width: auto; aspect-ratio: 3 / 4; justify-self: center; }
+    .kitchen__copy { gap: var(--v-4); }
+    .kitchen__copy .v-display--md { font-size: var(--v-t-xl); }
+    .dishes blockquote { margin-top: var(--v-3); }
+  }
+
+  /* ---- 4 · меню: веер карточек с фото + списки ---- */
+  .fanwrap { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; padding: 5.5rem var(--v-gutter) 2rem; max-width: 84rem; margin-inline: auto; }
+  .fanwrap__copy { display: flex; flex-direction: column; gap: var(--v-5); max-width: 30rem; }
+  .fan { position: relative; height: min(70svh, 38rem); --open: min(1, calc(var(--v-p, 0) * 2.6 + .06)); --ang: 5deg; --spread: clamp(2.6rem, 4.6vw, 4.4rem); --cw: clamp(10rem, 14vw, 14rem); }
+  .v-page .fan__card { position: absolute; left: 50%; bottom: 4%; width: var(--cw); padding: .45rem .45rem 0; border-radius: 6px; background: #f1ebdf; color: #0f1922; box-shadow: 0 2px 6px rgb(4 10 16 / .35), 0 18px 40px rgb(4 10 16 / .45); cursor: zoom-in; text-align: left;
+    transform-origin: 50% 150%;
+    transform: translateX(-50%) translateX(calc(var(--d) * var(--spread) * var(--open))) rotate(calc(var(--d) * var(--ang) * var(--open)));
+    transition: translate .18s var(--v-ease-out); }
+  .fan__card img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 3px; }
+  .fan__card span { display: block; padding: .5rem .15rem .6rem; font-size: var(--v-t-xs); font-weight: 500; line-height: 1.3; }
+  @media (hover: hover) and (pointer: fine) { .v-page .fan__card:hover { translate: 0 -1.4rem; z-index: 10; } }
+  .v-page .fan__card:focus-visible { translate: 0 -1.4rem; z-index: 10; }
+  .fan__hint { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
+  @media (max-width: 860px) {
+    .fanwrap { grid-template-columns: 1fr; grid-template-rows: auto 1fr; align-items: start; gap: var(--v-3); padding: 4.8rem var(--v-gutter) 1rem; }
+    .fanwrap__copy { gap: var(--v-3); }
+    .fanwrap__copy .v-display--md { font-size: var(--v-t-xl); }
+    .fan { height: 100%; min-height: 20rem; --ang: 3.5deg; --spread: 1.6rem; --cw: 7.7rem; }
+    .v-page .fan__card { transform-origin: 50% 140%; bottom: auto; top: 12%; }
+  }
+  .menu-list__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: var(--v-7) clamp(1.5rem, 4vw, 3.5rem); margin-top: var(--v-6); }
+  .page { padding-top: var(--v-5); border-top: 1px solid var(--v-hair-strong); }
+  .page h3 { font-size: var(--v-t-lg); margin-bottom: var(--v-4); }
+  .page li { padding: .8rem 0; border-top: 1px solid var(--v-hair); }
+  .page li:first-child { border-top: 0; padding-top: 0; }
+  .line { display: flex; align-items: baseline; gap: .6rem; }
+  .line span { font-weight: 500; }
+  .line::after { content: ""; order: 1; flex: 1; border-bottom: 1px dotted var(--v-hair-strong); transform: translateY(-.25em); }
+  .line em { order: 2; font-style: normal; font-size: var(--v-t-xs); color: var(--v-ink-soft); white-space: nowrap; }
+  .page li p { font-size: var(--v-t-sm); color: var(--v-ink-soft); margin-top: .25rem; }
+
+  /* ---- 5 · отзывы ---- */
+  .rev__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-5); }
+  .rating { display: flex; align-items: center; gap: var(--v-4); }
+  .rating b { font-family: var(--v-font-display); font-weight: 400; font-size: var(--v-t-3xl); line-height: 1; }
+  .stars { color: var(--v-accent); letter-spacing: .12em; font-size: 1.05rem; }
+  .rev__big { margin-top: var(--v-8); max-width: 26ch; font-family: var(--v-font-display); font-size: var(--v-t-2xl); line-height: 1.15; }
+  .rev__big + .who { margin-top: var(--v-4); }
+  .rev__list { margin-top: var(--v-8); display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--v-7) clamp(2rem, 6vw, 6rem); }
+  .rev__list li { padding-top: var(--v-5); border-top: 1px solid var(--v-hair); }
+  .rev__list li:nth-child(even) { transform: translateY(3rem); }
+  .rev__list .who { margin-top: var(--v-3); }
+  .rev__more { margin-top: calc(var(--v-8) + 3rem); }
+  @media (max-width: 760px) { .rev__big { font-size: var(--v-t-xl); line-height: 1.22; } .rev__list { grid-template-columns: 1fr; gap: var(--v-6); } .rev__list li:nth-child(even) { transform: none; } .rev__more { margin-top: var(--v-7); } }
+
+  /* ---- 6 · праздники ---- */
+  .fest { display: grid; grid-template-columns: minmax(0, 6fr) minmax(0, 5fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .fest__ph { position: relative; padding-bottom: 14%; }
+  .fest__ph .a { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--v-e2); }
+  .fest__ph .b { position: absolute; right: -6%; bottom: 0; width: 52%; aspect-ratio: 3 / 2; border-radius: var(--v-radius); overflow: hidden; box-shadow: var(--v-e2); outline: 6px solid var(--v-canvas); }
+  .fest__ph img { width: 100%; height: 100%; object-fit: cover; }
+  .facts { margin-top: var(--v-6); }
+  .facts li { display: grid; grid-template-columns: 8.5rem 1fr; gap: var(--v-4); padding: .85rem 0; border-top: 1px solid var(--v-hair); }
+  .facts li span { color: var(--v-ink-soft); font-size: var(--v-t-sm); }
+  @media (max-width: 860px) { .fest { grid-template-columns: 1fr; } .fest__ph .b { right: 0; } .facts li { grid-template-columns: 1fr; gap: .1rem; } }
+
+  /* ---- 7 · как добраться ---- */
+  .road { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: clamp(2rem, 6vw, 6rem); align-items: center; }
+  .road__ph { border-radius: var(--v-radius); overflow: hidden; aspect-ratio: 4 / 3; box-shadow: var(--v-e2); }
+  .road__ph img { width: 100%; height: 112%; object-fit: cover; }
+  .road .actions { display: flex; flex-wrap: wrap; gap: var(--v-3); margin-top: var(--v-6); }
+  @media (max-width: 860px) { .road { grid-template-columns: 1fr; } .road__ph { order: -1; } }
+
+  /* ---- 7б · галерея закатов ---- */
+  .sunsets { margin-top: var(--v-9); }
+  .sunsets__head { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: var(--v-3) var(--v-6); margin-bottom: var(--v-6); }
+  .sunsets__head p { max-width: 38ch; }
+  .sunsets__grid { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); grid-auto-rows: clamp(4.5rem, 7vw, 7rem); gap: var(--v-3); }
+  .v-page .sun { position: relative; display: block; padding: 0; overflow: hidden; border-radius: var(--v-radius); background: var(--v-surface); cursor: zoom-in; }
+  .sun img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--v-ease-out); }
+  @media (hover: hover) and (pointer: fine) { .sun:hover img { transform: scale(1.03); } }
+  .sun--wide { grid-column: span 4; grid-row: span 3; }
+  .sun--tall { grid-column: span 2; grid-row: span 3; }
+  .sun--pano { grid-column: span 6; grid-row: span 3; }
+  @media (max-width: 760px) {
+    .sunsets__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 7.5rem; }
+    .sun--wide, .sun--pano { grid-column: span 2; grid-row: span 2; }
+    .sun--tall { grid-column: span 1; grid-row: span 3; }
+  }
+  .lb { padding: 0; border: 0; background: transparent; max-width: 94vw; max-height: 92svh; overflow: visible; }
+  .lb::backdrop { background: rgb(8 13 19 / .9); }
+  .lb img { display: block; max-width: 94vw; max-height: 86svh; width: auto; height: auto; border-radius: var(--v-radius); }
+  .v-page .lb__close, .lb__close { display: block; margin: .8rem auto 0; padding: .55em 1.2em; border-radius: 999px; color: #ece6da; font: inherit; font-size: .9rem; background: transparent; border: 1px solid rgb(236 230 218 / .4); cursor: pointer; }
+
+  /* ---- 8 · финал ---- */
+  .final { position: relative; overflow: hidden; }
+  .final::before { content: ""; position: absolute; inset: 0; pointer-events: none;
+    background: radial-gradient(60rem 30rem at calc(var(--v-mx, .5) * 100%) 110%, rgb(240 169 68 / .16), transparent 60%); }
+  .close { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--v-5); }
+  .close__mark { width: clamp(5rem, 4rem + 4vw, 7.5rem); height: auto; aspect-ratio: 4 / 3; color: var(--v-ink); margin-bottom: var(--v-2); }
+  .close h2 { max-width: 16ch; }
+  .close p { max-width: 42ch; font-size: var(--v-t-lg); }
+  .close .actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-3); }
+  .foot__brand { display: inline-flex; align-items: center; gap: .7rem; }
+  .foot__mark { width: 2.3rem; height: 1.75rem; flex: none; color: var(--v-ink); }
+  .foot { position: relative; margin-top: var(--v-9); padding-top: var(--v-5); border-top: 1px solid var(--v-hair); display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--v-3) var(--v-6); font-size: var(--v-t-xs); color: var(--v-ink-soft); }
+</style>
+</head>
+<body>
+<div class="v-page">
+  <div data-v-progress></div>
+  <div class="v-grain" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a class="bar__brand" href="#top" aria-label="Панорама – наверх"><svg class="bar__mark" viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="15" r="8.5" fill="#f0a944"/><path d="M5 27.5H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="currentColor"/><path d="M42 38L51 32.5V43.5Z" fill="currentColor"/><circle cx="24.5" cy="37" r="1.4" fill="#0f1922"/></svg><span>Панорама</span><small>ресторан у Белого озера</small></a>
+    <nav aria-label="Разделы">
+      <a href="#segodnya">Закат</a>
+      <a href="#kuhnya">Кухня</a>
+      <a href="#menu">Меню</a>
+      <a href="#otzyvy">Отзывы</a>
+      <a href="#banket">Банкеты</a>
+      <a href="#doroga">Как добраться</a>
+    </nav>
+    <a class="v-btn" href="tel:+79531091999">Забронировать стол</a>
+  </header>
+
+  <main>
+
+    <!-- 1 · УЗНАВАНИЕ: окно на озеро -->
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#0f1922" aria-label="Ресторан «Панорама» на берегу Белого озера">
+      <div data-v-stage>
+        <div class="v-layer hero__back" data-v-parallax="-0.5">
+          <picture>
+            <source media="(max-width: 860px)" srcset="assets/hero-m.webp">
+            <img src="assets/hero.webp" alt="Столик у панорамного окна, за стеклом закат над Белым озером" width="1920" height="1067" fetchpriority="high">
+          </picture>
+        </div>
+        <div class="hero__shade" aria-hidden="true"></div>
+        <div class="v-copy v-copy--lead hero__copy" data-v-cue="0 0.85 0 0.12">
+          <h1 class="v-display v-display--xl" data-v-kinetic="lines">Ресторан на берегу Белого озера</h1>
+          <p class="v-lede">Белозерский судак, уха и снеток. Панорамные окна, веранда у воды и закат прямо за стеклом.</p>
+          <div class="hero__cta">
+            <a class="v-btn" href="tel:+79531091999">Забронировать стол</a>
+            <span class="hero__when"><b>+7 953 109-19-99</b><br>каждый день с 12:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 · ФИРМЕННЫЙ ХОД: сегодня в «Панораме» – закат и часы -->
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#111c26" id="segodnya" aria-label="Сегодня в «Панораме»">
+      <div class="v-wrap today">
+        <figure class="today__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
+          <img src="assets/zakat.webp" alt="Солнце садится в Белое озеро, вид с берега у ресторана" width="960" height="1280" loading="lazy" decoding="async">
+          <figcaption>Закат над Белым озером. Фото гостей с Яндекс Карт</figcaption>
+        </figure>
+        <div data-v-in data-v-stagger="80">
+          <p class="today__lead" data-today-date>Сегодня в Белозерске</p>
+          <p class="today__time"><small data-sun-label>Закат сегодня</small><span data-sun-time>–:–</span></p>
+          <p class="today__note" data-sun-note>Солнце садится прямо в озеро. Столик у окна лучше бронировать заранее, к закату.</p>
+          <div>
+            <p class="status" data-status><i aria-hidden="true"></i><span data-status-text>Каждый день с 12:00</span></p>
+            <ul class="hours" data-hours aria-label="Часы работы">
+              <li data-d="1"><b>Пн</b>12–22</li>
+              <li data-d="2"><b>Вт</b>12–22</li>
+              <li data-d="3"><b>Ср</b>12–22</li>
+              <li data-d="4"><b>Чт</b>12–22</li>
+              <li data-d="5"><b>Пт</b>12–24</li>
+              <li data-d="6"><b>Сб</b>12–24</li>
+              <li data-d="0"><b>Вс</b>12–22</li>
+            </ul>
+          </div>
+          <div class="tip">
+            <p>«Можно загуглить время заката и прийти именно на него.»</p>
+            <p class="who">Совет из отзыва Надежды, 9 мая 2026. Мы посчитали за вас.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · ПОВОРОТ: местная рыба -->
+    <section id="kuhnya" data-v-act="pin" data-v-span="3" data-v-drift="#141e28" aria-label="Кухня: судак, уха, снеток">
+      <div data-v-stage>
+        <div class="kitchen">
+          <div class="kitchen__copy">
+            <h2 class="v-display v-display--md">За чем сюда едут: местная рыба</h2>
+            <div class="dishes">
+              <div class="v-copy" data-v-cue="0 0.36 0 0.05" data-v-rise="10">
+                <h3>Белозерский судак</h3>
+                <p class="soft">С креветочным соусом и томатной сальсой. Или fish &amp; chips: филе судака в панировке с картофельными чипсами.</p>
+                <blockquote><p>«Невероятно свежая, нежная и сочная рыба!»</p><p class="who">Ксения, 20 августа 2026</p></blockquote>
+              </div>
+              <div class="v-copy" data-v-cue="0.33 0.68 0.05 0.05" data-v-rise="10">
+                <h3>Уха из судака</h3>
+                <p class="soft">Прозрачная, с крупными кусками рыбы. Гости отдельно пишут: ни одной косточки.</p>
+                <blockquote><p>«И только здесь знают, что такое Настоящая Уха!..»</p><p class="who">Cornely, 12 июня 2026</p></blockquote>
+              </div>
+              <div class="v-copy" data-v-cue="0.65 1 0.05 0" data-v-rise="10">
+                <h3>Жареный снеток</h3>
+                <p class="soft">Маленькая озёрная рыбка, которой славится Белозерье. Жарят до хруста.</p>
+                <blockquote><p>«Жареный снеток просто как семечки, невозможно оторваться»</p><p class="who">Надежда, 20 апреля 2026</p></blockquote>
+              </div>
+            </div>
+            <div class="kitchen__bar" aria-hidden="true"><i></i></div>
+          </div>
+          <div class="kitchen__fig">
+            <div class="ph"><img src="assets/sudak.webp" alt="Филе судака с креветочным соусом и томатной сальсой" width="1000" height="1333" loading="lazy" decoding="async"></div>
+            <div class="ph" data-v-reveal="up" data-v-reveal-at="0.3 0.42"><img src="assets/uha.webp" alt="Уха из судака с укропом и ржаным хлебом" width="1000" height="1333" loading="lazy" decoding="async"></div>
+            <div class="ph" data-v-reveal="up" data-v-reveal-at="0.62 0.74"><img src="assets/snetok.webp" alt="Жареный снеток с лимоном и соусом" width="1000" height="1333" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 · ВЫБОР: блюда с фото веером, остальное меню списком -->
+    <section id="menu" data-v-act="pin" data-v-span="2.2" data-v-drift="#161f29" aria-label="Меню">
+      <div data-v-stage>
+        <div class="fanwrap">
+          <div class="fanwrap__copy">
+            <h2 class="v-display v-display--md">Что ещё в меню</h2>
+            <p class="soft">Блюда «Панорамы» на фото гостей с Яндекс Карт. Меню меняется по сезону, цены и наличие лучше уточнить по телефону.</p>
+            <p class="fan__hint">Нажмите на карточку, чтобы рассмотреть фото целиком. <a class="link" href="#menu-list">Всё меню списком</a></p>
+          </div>
+          <div class="fan">
+            <button type="button" class="fan__card" style="--d: -3" data-full="assets/d-baklazhany-full.webp"><img src="assets/d-baklazhany.webp" alt="Салат с хрустящими баклажанами" width="600" height="800" loading="lazy" decoding="async"><span>Салат с хрустящими баклажанами</span></button>
+            <button type="button" class="fan__card" style="--d: -2" data-full="assets/d-sudak-full.webp"><img src="assets/d-sudak.webp" alt="Белозерский судак" width="600" height="800" loading="lazy" decoding="async"><span>Белозерский судак</span></button>
+            <button type="button" class="fan__card" style="--d: -1" data-full="assets/d-fish-full.webp"><img src="assets/d-fish.webp" alt="Fish & chips из судака" width="600" height="800" loading="lazy" decoding="async"><span>Fish &amp; chips из судака</span></button>
+            <button type="button" class="fan__card" style="--d: 0" data-full="assets/d-medal-full.webp"><img src="assets/d-medal.webp" alt="Медальоны из говяжьей вырезки" width="600" height="800" loading="lazy" decoding="async"><span>Медальоны из говяжьей вырезки</span></button>
+            <button type="button" class="fan__card" style="--d: 1" data-full="assets/d-rebra-full.webp"><img src="assets/d-rebra.webp" alt="Томлёные свиные рёбра BBQ" width="600" height="800" loading="lazy" decoding="async"><span>Томлёные свиные рёбра BBQ</span></button>
+            <button type="button" class="fan__card" style="--d: 2" data-full="assets/d-desert-full.webp"><img src="assets/d-desert.webp" alt="Шоколадный фондан и крем-брюле" width="600" height="800" loading="lazy" decoding="async"><span>Шоколадный фондан и крем-брюле</span></button>
+            <button type="button" class="fan__card" style="--d: 3" data-full="assets/d-kofe-full.webp"><img src="assets/d-kofe.webp" alt="Капучино" width="600" height="800" loading="lazy" decoding="async"><span>Капучино</span></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#161f29" id="menu-list" aria-label="Меню списком">
+      <div class="v-wrap">
+        <div data-v-in>
+          <h3 class="v-display v-display--sm">Меню списком</h3>
+        </div>
+        <div class="menu-list__grid" data-v-in data-v-stagger="70">
+          <div class="page">
+            <h3>Салаты и закуски</h3>
+            <ul>
+              <li><div class="line"><span>Хрустящие баклажаны</span><em>уточнить</em></div><p>Салат, который гости из Петербурга теперь сравнивают со всеми остальными.</p></li>
+              <li><div class="line"><span>Жареный снеток</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Цезарь</span><em>уточнить</em></div></li>
+            </ul>
+          </div>
+          <div class="page">
+            <h3>Супы</h3>
+            <ul>
+              <li><div class="line"><span>Уха из судака</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Солянка</span><em>уточнить</em></div><p>Кисло-солёная, «гущи не пожалели».</p></li>
+              <li><div class="line"><span>Том ям</span><em>уточнить</em></div></li>
+            </ul>
+          </div>
+          <div class="page">
+            <h3>Горячее</h3>
+            <ul>
+              <li><div class="line"><span>Белозерский судак</span><em>уточнить</em></div><p>С креветочным соусом и томатной сальсой.</p></li>
+              <li><div class="line"><span>Fish &amp; chips из судака</span><em>уточнить</em></div><p>Подаём на странице английской газеты.</p></li>
+              <li><div class="line"><span>Медальоны из говяжьей вырезки</span><em>уточнить</em></div><p>С перечным соусом и овощами гриль.</p></li>
+              <li><div class="line"><span>Томлёные свиные рёбра BBQ</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Говяжьи щёчки с пюре</span><em>уточнить</em></div></li>
+            </ul>
+          </div>
+          <div class="page">
+            <h3>Десерты и кофе</h3>
+            <ul>
+              <li><div class="line"><span>Шоколадный фондан</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Крем-брюле</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Кофе в турке</span><em>уточнить</em></div></li>
+              <li><div class="line"><span>Капучино</span><em>уточнить</em></div><p>Кофе можно взять с собой.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · ДОКАЗАТЕЛЬСТВО: отзывы -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#141e28" id="otzyvy" aria-label="Отзывы гостей">
+      <div class="v-wrap">
+        <div class="rev__head" data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--lg">Что пишут гости</h2>
+          <div class="rating">
+            <b>4,9</b>
+            <div><div class="stars" aria-hidden="true">★★★★★</div><span class="soft">на Яндекс Картах: 45 оценок, 32 отзыва</span></div>
+          </div>
+        </div>
+        <div data-v-in>
+          <p class="rev__big">«Ресторан "Панорама" - это то, чем запоминается Белозерск, наряду с Кремлём, музеями и Белым озером.»</p>
+          <p class="who">Cornely, 12 июня 2026</p>
+        </div>
+        <ul class="rev__list" data-v-in data-v-stagger="80">
+          <li><p>«Ответственно заявляю - здесь самая вкусная кухня в Белозерске. Я готова приехать к вам, чтобы только ещё раз отведать вашего судака!»</p><p class="who">Ксения, 20 августа 2026</p></li>
+          <li><p>«Восторг вызвал салат из хрустящих баклажанов с клубникой🔥- теперь все последующие пробы этого блюда будут сравниваться с Белозерским.»</p><p class="who">марина, 6 июля 2026</p></li>
+          <li><p>«Единственный ресторан в Белозерске уровня 'ресторан') По блюдам, подаче и обслуживанию.»</p><p class="who">Екатерина, 26 июля 2026</p></li>
+          <li><p>«Кушали с детьми, меню очень разнообразное, красивая сервировка. Вид на озеро хочется отметить, кушаешь и наслаждаешься)»</p><p class="who">Анастасия, 20 июня 2026</p></li>
+        </ul>
+        <p class="rev__more"><a class="link" href="https://yandex.ru/maps/org/panorama/61490943767/reviews/" target="_blank" rel="noopener">Читать все отзывы на Яндекс Картах</a></p>
+      </div>
+    </section>
+
+    <!-- 6 · ПРАЗДНИКИ: зал, веранда, танцпол -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#18202a" id="banket" aria-label="Банкеты и праздники">
+      <div class="v-wrap fest">
+        <div class="fest__ph">
+          <div class="a"><img src="assets/veranda.webp" alt="Летняя веранда вечером: гирлянда, деревянные столы, озеро за перилами" width="1280" height="960" loading="lazy" decoding="async" data-v-parallax="-0.3"></div>
+          <div class="b" data-v-reveal="left" data-v-reveal-at="0.2 0.5"><img src="assets/banket.webp" alt="Банкетный стол в зале у окна" width="1280" height="853" loading="lazy" decoding="async"></div>
+        </div>
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Свадьба, банкет или вечер с танцами</h2>
+          <p class="v-body" style="margin-top: var(--v-5)">Банкетный зал с окнами на озеро, танцпол и летняя веранда у воды. Проводим свадьбы, банкеты и корпоративы, устраиваем дискотеки.</p>
+          <ul class="facts">
+            <li><span>Зал</span><b>до <span class="slot">{{N}}</span> гостей</b></li>
+            <li><span>Своё вино</span><b>можно, есть пробковый сбор</b></li>
+            <li><span>Меню банкета</span><b>уточнить по телефону</b></li>
+            <li><span>Рядом</span><b>гостиница с видом на озеро, если гости останутся на ночь</b></li>
+          </ul>
+          <p style="margin-top: var(--v-6)"><a class="link" href="tel:+79531091999">Обсудить праздник: +7 953 109-19-99</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · ДОВЕРИЕ: как добраться -->
+    <section class="v-section" data-v-act="flow" data-v-drift="#141d27" id="doroga" aria-label="Как добраться">
+      <div class="v-wrap road">
+        <div class="road__ph"><img src="assets/vhod.webp" alt="Вход в ресторан: кирпичное здание с вывеской «Панорама», дорожка к дверям" width="1280" height="960" loading="lazy" decoding="async" data-v-parallax="-0.4"></div>
+        <div data-v-in data-v-stagger="70">
+          <h2 class="v-display v-display--md">Как нас найти</h2>
+          <p class="v-body" style="margin-top: var(--v-5)">Ресторан стоит на восточной окраине Белозерска, у обводного канала, там, где он выходит к Белому озеру. От центра дорога к берегу местами грунтовая: в дождь удобнее на машине или такси.</p>
+          <ul class="facts">
+            <li><span>Адрес</span><b>наб. П.К. Георгиевского, 5А</b></li>
+            <li><span>Часы</span><b>пн–чт и вс 12:00–22:00, пт и сб 12:00–00:00</b></li>
+            <li><span>Телефон</span><b><a class="link" href="tel:+79531091999">+7 953 109-19-99</a></b></li>
+            <li><span>Оплата</span><b>карта, СБП, наличные</b></li>
+            <li><span>Средний чек</span><b>1000–1500 ₽</b></li>
+          </ul>
+          <div class="actions">
+            <a class="v-btn v-btn--ghost" href="https://yandex.ru/maps/?rtext=~60.037209%2C37.814173&amp;rtt=auto" target="_blank" rel="noopener">Построить маршрут</a>
+            <a class="v-btn v-btn--ghost" href="https://vk.ru/panoramabelozersk" target="_blank" rel="noopener">Мы во ВКонтакте</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- галерея закатов: фото гостей, по клику открываются крупно -->
+      <div class="v-wrap sunsets" id="zakaty">
+        <div class="sunsets__head" data-v-in data-v-stagger="70">
+          <h3 class="v-display v-display--md">Закаты у «Панорамы»</h3>
+          <p class="soft">Так солнце садится над Белым озером и каналом у ресторана. Фото гостей с Яндекс Карт.</p>
+        </div>
+        <div class="sunsets__grid" data-v-in data-v-stagger="60">
+          <button type="button" class="sun sun--wide" data-full="assets/zakat-tuchi.webp"><img src="assets/zakat-tuchi.webp" alt="Закат под тучами: разлив озера и полоса зари над горизонтом" width="1280" height="960" loading="lazy" decoding="async"></button>
+          <button type="button" class="sun sun--tall" data-full="assets/zakat.webp"><img src="assets/zakat.webp" alt="Красное солнце садится в Белое озеро" width="960" height="1280" loading="lazy" decoding="async"></button>
+          <button type="button" class="sun sun--tall" data-full="assets/zakat-berezy.webp"><img src="assets/zakat-berezy.webp" alt="Солнце садится за берёзы на берегу, внизу канал и причал" width="720" height="1280" loading="lazy" decoding="async"></button>
+          <button type="button" class="sun sun--wide" data-full="assets/zdanie.webp"><img src="assets/zdanie.webp" alt="Ресторан на берегу канала после заката, отражение в воде" width="1280" height="960" loading="lazy" decoding="async"></button>
+          <button type="button" class="sun sun--pano" data-full="assets/zakat-prichal.webp"><img src="assets/zakat-prichal.webp" alt="Золотой закат над причалом и озером" width="1280" height="583" loading="lazy" decoding="async"></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · ДЕЙСТВИЕ -->
+    <section class="v-section final" data-v-act="flow" data-v-drift="#18202a" data-v-spotlight aria-label="Забронировать стол">
+      <div class="v-wrap">
+        <div class="close" data-v-in data-v-stagger="90">
+          <svg class="close__mark" viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="15" r="8.5" fill="#f0a944"/><path d="M5 27.5H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="currentColor"/><path d="M42 38L51 32.5V43.5Z" fill="currentColor"/><circle cx="24.5" cy="37" r="1.4" fill="#0f1922"/></svg>
+          <h2 class="v-display v-display--lg">Займите столик у окна к закату</h2>
+          <p class="soft">Позвоните, и мы оставим для вас стол у панорамного окна. Летом на веранде – у самой воды.</p>
+          <div class="actions">
+            <a class="v-btn" href="tel:+79531091999" data-v-magnet="0.2" data-v-rise="0">Забронировать стол</a>
+            <span class="hero__when"><b>+7 953 109-19-99</b><br>каждый день с 12:00</span>
+          </div>
+        </div>
+        <footer class="foot">
+          <span class="foot__brand"><svg class="foot__mark" viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="15" r="8.5" fill="#f0a944"/><path d="M5 27.5H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="currentColor"/><path d="M42 38L51 32.5V43.5Z" fill="currentColor"/><circle cx="24.5" cy="37" r="1.4" fill="#0f1922"/></svg>Ресторан «Панорама», Белозерск, наб. П.К. Георгиевского, 5А. <span class="slot">{{юрлицо}}</span></span>
+          <span>Фото блюд в меню, зала, веранды и закатов – с карточки на Яндекс Картах. Фото в разделе «За чем сюда едут» – иллюстрации.</span>
+        </footer>
+      </div>
+    </section>
+
+  </main>
+  <dialog class="lb" data-lb aria-label="Фото">
+    <img src="" alt="" data-lb-img>
+    <button type="button" class="lb__close" data-lb-close aria-label="Закрыть">Закрыть</button>
+  </dialog>
+</div>
+
+<script src="vibe.js"></script>
+<script>
+(function () {
+  "use strict";
+  // ---- «Сегодня в Панораме»: закат над Белозерском и открыто ли сейчас ----
+  var LAT = 60.0372, LON = 37.8142, TZ = 3; // Белозерск, московское время
+  var OPEN = 12 * 60, CLOSE = [22, 22, 22, 22, 22, 24, 24]; // вс..сб, часы закрытия
+  var DAYS = ["воскресенье", "понедельник", "вторник", "среда", "четверг", "пятница", "суббота"];
+  var MONTHS = ["января", "февраля", "марта", "апреля", "мая", "июня", "июля", "августа", "сентября", "октября", "ноября", "декабря"];
+
+  // время заката (минуты от полуночи по Москве), алгоритм NOAA / Almanac for Computers
+  function sunsetMin(y, m, d) {
+    var rad = Math.PI / 180;
+    var N = Math.floor((Date.UTC(y, m, d) - Date.UTC(y, 0, 0)) / 864e5);
+    var lngH = LON / 15, t = N + (18 - lngH) / 24;
+    var M = 0.9856 * t - 3.289;
+    var L = (M + 1.916 * Math.sin(M * rad) + 0.020 * Math.sin(2 * M * rad) + 282.634 + 360) % 360;
+    var RA = (Math.atan(0.91764 * Math.tan(L * rad)) / rad + 360) % 360;
+    RA = (RA + Math.floor(L / 90) * 90 - Math.floor(RA / 90) * 90) / 15;
+    var sinDec = 0.39782 * Math.sin(L * rad), cosDec = Math.cos(Math.asin(sinDec));
+    var cosH = (Math.cos(90.833 * rad) - sinDec * Math.sin(LAT * rad)) / (cosDec * Math.cos(LAT * rad));
+    if (cosH < -1 || cosH > 1) return null;
+    var H = Math.acos(cosH) / rad / 15;
+    var UT = ((H + RA - 0.06571 * t - 6.622 - lngH) % 24 + 24) % 24;
+    return Math.round(((UT + TZ) % 24) * 60);
+  }
+  var hm = function (min) { min = ((min % 1440) + 1440) % 1440; return Math.floor(min / 60) + ":" + String(min % 60).padStart(2, "0"); };
+  var $ = function (s) { return document.querySelector(s); };
+
+  try {
+    var now = new Date(Date.now() + TZ * 36e5); // часы Белозерска в полях UTC
+    var y = now.getUTCFullYear(), mo = now.getUTCMonth(), d = now.getUTCDate(), wd = now.getUTCDay();
+    var cur = now.getUTCHours() * 60 + now.getUTCMinutes();
+    var close = CLOSE[wd] * 60;
+    var sun = sunsetMin(y, mo, d);
+
+    $("[data-today-date]").textContent = "Сегодня, " + d + " " + MONTHS[mo] + ", " + DAYS[wd];
+    var li = $('[data-hours] [data-d="' + wd + '"]'); if (li) li.classList.add("is-today");
+
+    var isOpen = cur >= OPEN && cur < close;
+    var st = $("[data-status]"), stt = $("[data-status-text]");
+    st.classList.toggle("is-closed", !isOpen);
+    stt.textContent = isOpen ? "Сейчас открыто, до " + (CLOSE[wd] === 24 ? "полуночи" : hm(close))
+      : cur < OPEN ? "Сейчас закрыто, откроемся сегодня в 12:00" : "Сейчас закрыто, откроемся завтра в 12:00";
+
+    if (sun != null) {
+      var label = $("[data-sun-label]"), time = $("[data-sun-time]"), note = $("[data-sun-note]");
+      time.textContent = hm(sun);
+      if (sun >= close) {
+        note.textContent = "Солнце сядет позже, чем мы закрываемся: летом над озером светло весь вечер, и ужин у окна проходит при солнце.";
+      } else if (cur > sun + 20) {
+        var tm = new Date(Date.UTC(y, mo, d + 1)), sun2 = sunsetMin(tm.getUTCFullYear(), tm.getUTCMonth(), tm.getUTCDate());
+        label.textContent = "Сегодня солнце село в " + hm(sun) + ". Завтра закат в";
+        time.textContent = hm(sun2);
+        note.textContent = "Столик у окна лучше бронировать к " + hm(Math.max(OPEN, Math.floor((sun2 - 40) / 5) * 5)) + " – так вы увидите, как солнце садится в озеро.";
+      } else {
+        note.textContent = "Столик у окна лучше бронировать к " + hm(Math.max(OPEN, Math.floor((sun - 40) / 5) * 5)) + " – так вы увидите, как солнце садится в озеро.";
+      }
+    }
+  } catch (e) { /* блок остаётся с текстом по умолчанию */ }
+
+  // ---- галерея закатов: фото крупно по клику ----
+  var lb = $("[data-lb]"), lbImg = $("[data-lb-img]");
+  if (lb && lb.showModal) {
+    document.querySelectorAll("[data-full]").forEach(function (b) {
+      b.addEventListener("click", function () {
+        var img = b.querySelector("img");
+        lbImg.src = b.getAttribute("data-full"); lbImg.alt = img ? img.alt : "";
+        lb.showModal();
+      });
+    });
+    $("[data-lb-close]").addEventListener("click", function () { lb.close(); });
+    lb.addEventListener("click", function (e) { if (e.target === lb) lb.close(); });
+  }
+
+  var hdr = document.querySelector(".bar");
+  var onScroll = function () { hdr.classList.toggle("is-scrolled", scrollY > 40); };
+  addEventListener("scroll", onScroll, { passive: true }); onScroll();
+  Vibe.mount(document.querySelector(".v-page"));
+})();
+</script>
+</body>
+</html>
