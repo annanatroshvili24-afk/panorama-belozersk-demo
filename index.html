@@ -13,7 +13,7 @@
 <meta property="og:description" content="Судак, уха и снеток. Панорамные окна, веранда у воды и закат прямо за стеклом.">
 <meta property="og:image" content="./assets/og.jpg">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#0f1922">
+<meta name="theme-color" content="#edf1f2">
 <link rel="preload" as="image" href="assets/hero-m.webp" media="(max-width: 860px)" fetchpriority="high">
 <link rel="preload" as="image" href="assets/hero.webp" media="(min-width: 861px)" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,13 +25,13 @@
 {"@context":"https://schema.org","@type":"Restaurant","name":"Панорама","servesCuisine":["Русская","Европейская"],"telephone":"+79531091999","priceRange":"1000–1500 ₽","address":{"@type":"PostalAddress","streetAddress":"наб. П.К. Георгиевского, 5А","addressLocality":"Белозерск","addressRegion":"Вологодская область","addressCountry":"RU"},"geo":{"@type":"GeoCoordinates","latitude":60.037209,"longitude":37.814173},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Sunday"],"opens":"12:00","closes":"22:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Friday","Saturday"],"opens":"12:00","closes":"23:59"}],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"45"},"sameAs":["https://vk.ru/panoramabelozersk"]}
 </script>
 <style>
-  /* ---- тема «Белое озеро на закате»: северная вода, береста, морошка ---- */
+  /* ---- тема «Белые ночи»: туман над озером, глубокая вода текстом, морошка кнопкой ---- */
   .v-page {
-    --v-canvas: #0f1922; --v-surface: #172431;
-    --v-ink: #ece6da; --v-ink-soft: #a3b2bb;
-    --v-accent: #f0a944; --v-accent-ink: #1d1206;
-    --water: #24394a;
-    --v-shadow-color: 4 10 16;
+    --v-canvas: #edf1f2; --v-surface: #ffffff;
+    --v-ink: #13232f; --v-ink-soft: #4f6370;
+    --v-accent: #ee9f3a; --v-accent-ink: #1d1206;
+    --on-photo: #f4efe6; --on-photo-soft: #d9dfe2;
+    --v-shadow-color: 30 50 65;
     --v-font-display: "Tenor Sans", "Georgia", serif;
     --v-font-text: "Golos Text", "Segoe UI", system-ui, sans-serif;
     --v-display-weight: 400;
@@ -39,7 +39,7 @@
     --v-radius: 4px;
     --v-section: clamp(4.5rem, 10vw, 9rem);
   }
-  html, body { margin: 0; background: #0f1922; }
+  html, body { margin: 0; background: #edf1f2; }
   html { scroll-padding-top: 5rem; }
   .v-page { line-height: 1.62; letter-spacing: .005em; }
   .v-page .v-display { line-height: 1.04; }
@@ -55,10 +55,12 @@
 
   /* ---- шапка ---- */
   .bar { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; align-items: center; gap: var(--v-5); padding: .8rem var(--v-gutter); transition: background-color .3s var(--v-ease-out), box-shadow .3s var(--v-ease-out); }
-  .bar.is-scrolled { background: rgb(15 25 34 / .86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
+  .bar:not(.is-scrolled) { --v-ink: var(--on-photo); --v-ink-soft: var(--on-photo-soft); color: var(--v-ink); }
+  .bar.is-scrolled { background: rgb(237 241 242 / .9); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 1px 0 var(--v-hair); }
   .bar__brand { display: flex; align-items: center; gap: .6rem; font-family: var(--v-font-display); font-size: 1.55rem; line-height: 1; text-decoration: none; }
   .bar__mark { width: 2.9rem; height: 2.2rem; flex: none; }
   @media (max-width: 480px) { .bar__mark { width: 2.2rem; height: 1.65rem; } .bar__brand { gap: .45rem; } .bar__brand span { font-size: .98rem; letter-spacing: .05em; } .bar { gap: var(--v-3); padding-inline: 1rem; } .bar .v-btn { padding: .65em 1em; font-size: .8rem; } }
+  .bar.is-scrolled .bar__mark circle:last-child, .foot__mark circle:last-child, .close__mark circle:last-child { fill: var(--v-canvas); }
   .bar__brand span { letter-spacing: .1em; text-transform: uppercase; font-size: 1.2rem; }
   .bar__brand small { font-family: var(--v-font-text); font-size: var(--v-t-xs); color: var(--v-ink-soft); letter-spacing: .01em; }
   .bar nav { display: flex; gap: var(--v-5); margin-left: auto; font-size: var(--v-t-sm); }
@@ -68,6 +70,7 @@
   @media (max-width: 960px) { .bar nav { display: none; } .bar .v-btn { margin-left: auto; } .bar__brand small { display: none; } }
 
   /* ---- 1 · hero ---- */
+  #top { --v-ink: var(--on-photo); --v-ink-soft: var(--on-photo-soft); color: var(--v-ink); }
   .hero__back { inset: -6% 0; }
   .hero__back img, .hero__back picture { width: 100%; height: 100%; }
   .hero__back img { object-fit: cover; object-position: 60% 50%; }
@@ -76,7 +79,7 @@
   .hero__copy { max-width: min(44rem, 88vw); }
   .hero__copy .v-lede { margin-top: var(--v-5); max-width: 30ch; color: #e4ddd0; }
   .hero__cta { display: flex; flex-wrap: wrap; align-items: center; gap: var(--v-4) var(--v-5); margin-top: var(--v-6); }
-  .hero__when { font-size: var(--v-t-sm); color: #d6d0c4; }
+  .hero__when { font-size: var(--v-t-sm); color: var(--v-ink-soft); }
   .hero__when b { font-weight: 500; color: var(--v-ink); }
   @media (max-width: 860px) {
     .hero__back img { object-position: 50% 40%; }
@@ -94,8 +97,8 @@
   .today__time small { display: block; font-family: var(--v-font-text); font-size: var(--v-t-lg); letter-spacing: 0; color: var(--v-ink); margin-bottom: var(--v-3); }
   .today__note { margin-top: var(--v-5); max-width: 40ch; font-size: var(--v-t-lg); line-height: 1.45; }
   .status { display: inline-flex; align-items: center; gap: .55rem; margin-top: var(--v-7); font-size: var(--v-t-sm); }
-  .status i { width: .55rem; height: .55rem; border-radius: 50%; background: #7fbf8f; box-shadow: 0 0 0 4px rgb(127 191 143 / .18); }
-  .status.is-closed i { background: var(--v-ink-soft); box-shadow: 0 0 0 4px rgb(163 178 187 / .16); }
+  .status i { width: .55rem; height: .55rem; border-radius: 50%; background: #3f9a5c; box-shadow: 0 0 0 4px rgb(63 154 92 / .16); }
+  .status.is-closed i { background: var(--v-ink-soft); box-shadow: 0 0 0 4px rgb(79 99 112 / .14); }
   .hours { margin-top: var(--v-4); display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); border-top: 1px solid var(--v-hair); font-size: var(--v-t-xs); }
   .hours li { padding: .7rem .2rem 0; color: var(--v-ink-soft); }
   .hours li b { display: block; font-weight: 500; color: var(--v-ink-soft); font-size: var(--v-t-sm); }
@@ -136,7 +139,7 @@
   .fanwrap { position: absolute; inset: 0; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 4rem); align-items: center; padding: 5.5rem var(--v-gutter) 2rem; max-width: 84rem; margin-inline: auto; }
   .fanwrap__copy { display: flex; flex-direction: column; gap: var(--v-5); max-width: 30rem; }
   .fan { position: relative; height: min(70svh, 38rem); --open: min(1, calc(var(--v-p, 0) * 2.6 + .06)); --ang: 5deg; --spread: clamp(2.6rem, 4.6vw, 4.4rem); --cw: clamp(10rem, 14vw, 14rem); }
-  .v-page .fan__card { position: absolute; left: 50%; bottom: 4%; width: var(--cw); padding: .45rem .45rem 0; border-radius: 6px; background: #f1ebdf; color: #0f1922; box-shadow: 0 2px 6px rgb(4 10 16 / .35), 0 18px 40px rgb(4 10 16 / .45); cursor: zoom-in; text-align: left;
+  .v-page .fan__card { position: absolute; left: 50%; bottom: 4%; width: var(--cw); padding: .45rem .45rem 0; border-radius: 6px; background: #ffffff; color: #13232f; box-shadow: 0 1px 3px rgb(30 50 65 / .16), 0 16px 36px rgb(30 50 65 / .2); cursor: zoom-in; text-align: left;
     transform-origin: 50% 150%;
     transform: translateX(-50%) translateX(calc(var(--d) * var(--spread) * var(--open))) rotate(calc(var(--d) * var(--ang) * var(--open)));
     transition: translate .18s var(--v-ease-out); }
@@ -219,7 +222,7 @@
   /* ---- 8 · финал ---- */
   .final { position: relative; overflow: hidden; }
   .final::before { content: ""; position: absolute; inset: 0; pointer-events: none;
-    background: radial-gradient(60rem 30rem at calc(var(--v-mx, .5) * 100%) 110%, rgb(240 169 68 / .16), transparent 60%); }
+    background: radial-gradient(60rem 30rem at calc(var(--v-mx, .5) * 100%) 110%, rgb(238 159 58 / .2), transparent 60%); }
   .close { position: relative; display: flex; flex-direction: column; align-items: flex-start; gap: var(--v-5); }
   .close__mark { width: clamp(5rem, 4rem + 4vw, 7.5rem); height: auto; aspect-ratio: 4 / 3; color: var(--v-ink); margin-bottom: var(--v-2); }
   .close h2 { max-width: 16ch; }
@@ -251,7 +254,7 @@
   <main>
 
     <!-- 1 · УЗНАВАНИЕ: окно на озеро -->
-    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#0f1922" aria-label="Ресторан «Панорама» на берегу Белого озера">
+    <section id="top" data-v-act="pin" data-v-span="1.6" data-v-drift="#edf1f2" aria-label="Ресторан «Панорама» на берегу Белого озера">
       <div data-v-stage>
         <div class="v-layer hero__back" data-v-parallax="-0.5">
           <picture>
@@ -272,7 +275,7 @@
     </section>
 
     <!-- 2 · ФИРМЕННЫЙ ХОД: сегодня в «Панораме» – закат и часы -->
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#111c26" id="segodnya" aria-label="Сегодня в «Панораме»">
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#f0f2f0" id="segodnya" aria-label="Сегодня в «Панораме»">
       <div class="v-wrap today">
         <figure class="today__ph" data-v-reveal="up" data-v-reveal-at="0.08 0.4">
           <img src="assets/zakat.webp" alt="Солнце садится в Белое озеро, вид с берега у ресторана" width="960" height="1280" loading="lazy" decoding="async">
@@ -303,7 +306,7 @@
     </section>
 
     <!-- 3 · ПОВОРОТ: местная рыба -->
-    <section id="kuhnya" data-v-act="pin" data-v-span="3" data-v-drift="#141e28" aria-label="Кухня: судак, уха, снеток">
+    <section id="kuhnya" data-v-act="pin" data-v-span="3" data-v-drift="#ecf0f1" aria-label="Кухня: судак, уха, снеток">
       <div data-v-stage>
         <div class="kitchen">
           <div class="kitchen__copy">
@@ -337,7 +340,7 @@
     </section>
 
     <!-- 4 · ВЫБОР: блюда с фото веером, остальное меню списком -->
-    <section id="menu" data-v-act="pin" data-v-span="2.2" data-v-drift="#161f29" aria-label="Меню">
+    <section id="menu" data-v-act="pin" data-v-span="2.2" data-v-drift="#eef1f0" aria-label="Меню">
       <div data-v-stage>
         <div class="fanwrap">
           <div class="fanwrap__copy">
@@ -358,7 +361,7 @@
       </div>
     </section>
 
-    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#161f29" id="menu-list" aria-label="Меню списком">
+    <section class="v-section v-section--tight" data-v-act="flow" data-v-drift="#eef1f0" id="menu-list" aria-label="Меню списком">
       <div class="v-wrap">
         <div data-v-in>
           <h3 class="v-display v-display--sm">Меню списком</h3>
@@ -404,7 +407,7 @@
     </section>
 
     <!-- 5 · ДОКАЗАТЕЛЬСТВО: отзывы -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#141e28" id="otzyvy" aria-label="Отзывы гостей">
+    <section class="v-section" data-v-act="flow" data-v-drift="#f2f2ee" id="otzyvy" aria-label="Отзывы гостей">
       <div class="v-wrap">
         <div class="rev__head" data-v-in data-v-stagger="70">
           <h2 class="v-display v-display--lg">Что пишут гости</h2>
@@ -428,7 +431,7 @@
     </section>
 
     <!-- 6 · ПРАЗДНИКИ: зал, веранда, танцпол -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#18202a" id="banket" aria-label="Банкеты и праздники">
+    <section class="v-section" data-v-act="flow" data-v-drift="#f4f1eb" id="banket" aria-label="Банкеты и праздники">
       <div class="v-wrap fest">
         <div class="fest__ph">
           <div class="a"><img src="assets/veranda.webp" alt="Летняя веранда вечером: гирлянда, деревянные столы, озеро за перилами" width="1280" height="960" loading="lazy" decoding="async" data-v-parallax="-0.3"></div>
@@ -449,7 +452,7 @@
     </section>
 
     <!-- 7 · ДОВЕРИЕ: как добраться -->
-    <section class="v-section" data-v-act="flow" data-v-drift="#141d27" id="doroga" aria-label="Как добраться">
+    <section class="v-section" data-v-act="flow" data-v-drift="#eef1f1" id="doroga" aria-label="Как добраться">
       <div class="v-wrap road">
         <div class="road__ph"><img src="assets/vhod.webp" alt="Вход в ресторан: кирпичное здание с вывеской «Панорама», дорожка к дверям" width="1280" height="960" loading="lazy" decoding="async" data-v-parallax="-0.4"></div>
         <div data-v-in data-v-stagger="70">
@@ -486,7 +489,7 @@
     </section>
 
     <!-- 8 · ДЕЙСТВИЕ -->
-    <section class="v-section final" data-v-act="flow" data-v-drift="#18202a" data-v-spotlight aria-label="Забронировать стол">
+    <section class="v-section final" data-v-act="flow" data-v-drift="#f6efe5" data-v-spotlight aria-label="Забронировать стол">
       <div class="v-wrap">
         <div class="close" data-v-in data-v-stagger="90">
           <svg class="close__mark" viewBox="0 0 64 48" aria-hidden="true"><circle cx="32" cy="15" r="8.5" fill="#f0a944"/><path d="M5 27.5H59" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M19 38C25 32 37 32 43 38C37 44 25 44 19 38Z" fill="currentColor"/><path d="M42 38L51 32.5V43.5Z" fill="currentColor"/><circle cx="24.5" cy="37" r="1.4" fill="#0f1922"/></svg>
